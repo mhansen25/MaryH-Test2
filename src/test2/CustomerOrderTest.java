@@ -35,6 +35,7 @@ public class CustomerOrderTest {
 	// ToDo: Test inventory update when an order is placed
 	// Add an item to the order and reduce its stock. Verify that the inventory
 	// count is updated correctly.
+
 	@Test
 	public void testInventoryUpdate() {
 		order.addItem("Pepperoni Pizza", 12.50);
@@ -54,7 +55,15 @@ public class CustomerOrderTest {
 
 	// ToDo: Test order status updates
 	// Set the status of the order and verify that the status is updated correctly.
-
+	@Test
+	public void testOrderStatusUpdate() {
+	    order.addItem("Cheese Pizza", 10.00);
+	    order.setStatus("Ready");
+	    assertEquals("Ready", order.getStatus());
+	}
 
 }
+
+
+
 
